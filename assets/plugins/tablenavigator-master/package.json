@@ -1,0 +1,33 @@
+{
+  "name": "tablenavigator",
+  "version": "2.0.1",
+  "description": "jQuery plugin for creating spreadsheet-like data table with input fields and keyboard navigation support just like the Microsoft Excel ",
+  "main": "src/jquery.tablenavigator.js",
+  "repository": "https://github.com/NaveenDA/tableNavigator.git",
+  "author": "Naveen DA naveenda360@gmail.com",
+  "license": "MIT",
+  "keywords": [
+    "jquery-plugin",
+    "html",
+    "navigation",
+    "table"
+  ],
+  "devDependencies": {
+    "uglify-js": "^3.6.1",
+    "prettier": "^1.18.2"
+  },
+  "peerDependencies": {
+    "jquery": ">=1.11.0"
+  },
+  "dependencies": {
+    "husky": "^3.0.8"
+  },
+  "scripts": {
+    "minify": "uglifyjs src/jquery.tablenavigator.js -o dist/jquery.tablenavigator.min.js",
+    "copy": "cp src/jquery.tablenavigator.js dist/jquery.tablenavigator.js",
+    "format": "prettier --write src/*"
+  },
+  "husky": {
+    "pre-commit": "npm run format"
+  }
+}
